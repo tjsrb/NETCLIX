@@ -1,0 +1,48 @@
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  background: black;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  z-index: 1;
+}
+.btn {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+#btnlogin {
+  margin-right: 30px;
+}
+#id {
+  width: 200px;
+  height: 30px;
+}
+#pw {
+  width: 200px;
+  height: 30px;
+}
