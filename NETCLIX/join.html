@@ -1,11 +1,61 @@
 <html>
-    <head> 
-        <meta charset="utf-8">
-        <title> 회원가입 페이지 </title>
-        <link rel="stylesheet" href="./main.css">
-        <script src="./data.js "> </script>
-    </head> 
-    <body>
-	test13
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <title> 회원가입 페이지 </title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./data.js "> </script>
+</head>
+
+<body>
+    <div class="center">
+        <img src="./logo.png">
+        <div> 
+        <div>
+            <div class="margin">
+                <input type="email" class="id" id="id" placeholder="아이디 입력">
+                <label id="msg">중복되는 아이디 입니다.</label> 
+            </div>
+        </div>
+        <div class="margin">
+            <input type="password" class="pw" id="pw" placeholder="비밀번호">
+            <input type="password" class="CheckPW" id="CheckPW" placeholder="비밀번호 확인">
+        </div>
+
+        <div class="btn">
+            <button type="button" id="btnjoin">
+                회원가입
+            </button>
+            <a href="login.html"  class="margin-left">로그인 하러 가기</a>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+<script> 
+    const $id = document.getElementById('id');
+    const $pw = document.getElementById('pw');
+    const $CheckPW = document.getElementById('CheckPW');
+    const $btnjoin = document.getElementById('btnjoin');
+    $btnjoin.addEventListener("click",joinHandler);
+
+    function joinHandler(){
+        const join = getUser($id.value);
+        if(join == null){
+            
+        }
+    }
+    function NullCheck(id,pw,CheckPW){
+
+    }
+    function getUser(id,pw){
+        for(let i=0; i<users.length;i++){
+            if(id == users[i].id){
+            return users[i];
+        }
+    }
+    return null;
+    }
+</script>
+
 </html>

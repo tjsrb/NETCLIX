@@ -10,7 +10,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   height: 100%;
   width: 100%;
 
@@ -35,14 +34,27 @@
   align-items: center;
   font-size: 1.6rem;
 }
-#btnlogin {
+.btnlogin {
   margin-right: 30px;
 }
-#id {
+.id {
   width: 200px;
   height: 30px;
 }
-#pw {
+.pw {
   width: 200px;
   height: 30px;
+}
+.CheckPW {
+  width: 200px;
+  height: 30px;
+}
+.margin{
+  margin:15px;
+}
+.margin-left{
+  margin-left: 15px;
+}
+.msg{
+  display: none;
 }
