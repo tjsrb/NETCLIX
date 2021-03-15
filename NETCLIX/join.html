@@ -37,16 +37,20 @@
     const $pw = document.getElementById('pw');
     const $CheckPW = document.getElementById('CheckPW');
     const $btnjoin = document.getElementById('btnjoin');
-    $btnjoin.addEventListener("click",joinHandler);
+    $btnjoin.addEventListener("click",NullCheck);
 
     function joinHandler(){
         const join = getUser($id.value);
         if(join == null){
-            
+
         }
     }
-    function NullCheck(id,pw,CheckPW){
-
+    function NullCheck($id,$pw,$CheckPW){
+        alert($id);
+        if(id.value == ''|| pw.value == '' || CheckPW == ''){
+            alert("빈공간이 존재합니다."); 
+            return false;
+        }
     }
     function getUser(id,pw){
         for(let i=0; i<users.length;i++){
