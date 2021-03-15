@@ -55,6 +55,13 @@
 .margin-left{
   margin-left: 15px;
 }
-.msg{
+.hidden{
   display: none;
 }
+.show{
+  color: red;
+}
+.show2{
+  color: blue;
+}
+  

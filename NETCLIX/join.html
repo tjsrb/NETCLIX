@@ -14,7 +14,8 @@
         <div>
             <div class="margin">
                 <input type="email" class="id" id="id" placeholder="아이디 입력">
-                <label id="msg">중복되는 아이디 입니다.</label> 
+                <label id="msg" class="hidden show"> 중복되는 아이디 입니다.</label>
+                <label id="msg1" class = "hidden show2">사용 가능한 아이디 입니다. </label>  
             </div>
         </div>
         <div class="margin">
@@ -37,19 +38,32 @@
     const $pw = document.getElementById('pw');
     const $CheckPW = document.getElementById('CheckPW');
     const $btnjoin = document.getElementById('btnjoin');
-    $btnjoin.addEventListener("click",NullCheck);
+    const $msg = document.getElementById('msg');
+    const $msg1 = document.getElementById('msg1'); 
+    $btnjoin.addEventListener("click",joinHandler);
+    
+
 
     function joinHandler(){
-        const join = getUser($id.value);
-        if(join == null){
-
-        }
+       
     }
     function NullCheck($id,$pw,$CheckPW){
-        alert($id);
         if(id.value == ''|| pw.value == '' || CheckPW == ''){
-            alert("빈공간이 존재합니다."); 
+            
             return false;
+        }
+    }
+    function msg(){
+        const join = getUser($id.value);
+        if(join == null){
+            $msg.classList.remove('hidden');
+            $msg1.classList.remove('show2');
+            $msg.classList.add('show');
+        }
+        else{
+            $msg.classList.remove('show');
+            $msg1.classList.remove('hidden');
+            $msg.classList.add('show2');
         }
     }
     function getUser(id,pw){
