@@ -10,69 +10,82 @@
 <body>
     <div class="center">
         <img src="./logo.png">
-        <div> 
         <div>
+            <div>
+                <div class="margin">
+                    <input type="email" class="id" id="id" placeholder="아이디 입력">
+                    <label id="msg" class="hidden show"> 중복되는 아이디 입니다.</label>
+                    <label id="msg1" class="hidden show2">사용 가능한 아이디 입니다. </label>
+
+                </div>
+            </div>
             <div class="margin">
-                <input type="email" class="id" id="id" placeholder="아이디 입력">
-                <label id="msg" class="hidden show"> 중복되는 아이디 입니다.</label>
-                <label id="msg1" class = "hidden show2">사용 가능한 아이디 입니다. </label>  
+                <input type="password" class="pw" id="pw" placeholder="비밀번호">
+                <input type="password" class="CheckPW" id="CheckPW" placeholder="비밀번호 확인">
+            </div>
+            <div>
+                <label id="null" class="hidden show margin-left">빈공간이 존재합니다.</label>
+            </div>
+            <div class="btn">
+                <button type="button" id="btnjoin">
+                    회원가입
+                </button>
+                <a href="login.html" class="margin-left">로그인 하러 가기</a>
             </div>
         </div>
-        <div class="margin">
-            <input type="password" class="pw" id="pw" placeholder="비밀번호">
-            <input type="password" class="CheckPW" id="CheckPW" placeholder="비밀번호 확인">
-        </div>
-
-        <div class="btn">
-            <button type="button" id="btnjoin">
-                회원가입
-            </button>
-            <a href="login.html"  class="margin-left">로그인 하러 가기</a>
-        </div>
     </div>
     </div>
-</div>
 </body>
-<script> 
+<script>
     const $id = document.getElementById('id');
     const $pw = document.getElementById('pw');
     const $CheckPW = document.getElementById('CheckPW');
     const $btnjoin = document.getElementById('btnjoin');
     const $msg = document.getElementById('msg');
-    const $msg1 = document.getElementById('msg1'); 
-    $btnjoin.addEventListener("click",joinHandler);
+    const $msg1 = document.getElementById('msg1');
+    const $null = document.getElementById('null');
+    $btnjoin.addEventListener("click", joinHandler);
+    // $btnjoin.disabled = 'disabled';
 
- 
-
-    function joinHandler(){
-       
-    }
-    function NullCheck($id,$pw,$CheckPW){
-        if(id.value == ''|| pw.value == '' || CheckPW == ''){
+    function joinHandler() {
+        NullCheck();
+        const join = getUser($id.value);
+        if (join == null) {
             
-            return false;
+        }
+
+    }
+    function NullCheck($id, $pw, $CheckPW) {
+        if (id.value == '' || pw.value == '' || CheckPW.value == '') {
+            $null.classList.remove('hidden');
+        }
+        else{
+            $null.classList.add('hidden');
         }
     }
-    function msg(){
+    function msg() {
         const join = getUser($id.value);
-        if(join == null){
+        if (join == null) {
             $msg.classList.remove('hidden');
             $msg1.classList.remove('show2');
             $msg.classList.add('show');
         }
-        else{
+        else {
             $msg.classList.remove('show');
             $msg1.classList.remove('hidden');
             $msg.classList.add('show2');
         }
     }
-    function getUser(id,pw){
-        for(let i=0; i<users.length;i++){
-            if(id == users[i].id){
-            return users[i];
+    function getUser(id) {
+        for (let i = 0; i < users.length; i++) {
+            if (id == users[i].id) {
+                return users[i];
+            }
         }
+        return null;
     }
-    return null;
+    function btnon() {
+        $btnjoin.disabled = false;
     }
 </script>
 
