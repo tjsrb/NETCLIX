@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <div class="center">
+    
+    <div class="center vh">
         <img src="./logo.png">
         <div>
             <div>
@@ -46,12 +47,19 @@
     const $null = document.getElementById('null');
     $btnjoin.addEventListener("click", joinHandler);
     // $btnjoin.disabled = 'disabled';
+    $id.addEventListener("blur",NullCheck);
+    $pw.addEventListener("blur",NullCheck);
+    $CheckPW.addEventListener("blur",NullCheck);
+
 
     function joinHandler() {
-        NullCheck();
+        
         const join = getUser($id.value);
-        if (join == null) {
-            
+        if (NullCheck ==  true) {
+            console.log("asd"); 
+            if(msg == true){
+                btnon();
+            }
         }
 
     }
@@ -61,11 +69,13 @@
         }
         else{
             $null.classList.add('hidden');
+            return true;
         }
     }
     function msg() {
         const join = getUser($id.value);
         if (join == null) {
+            alert("msg");
             $msg.classList.remove('hidden');
             $msg1.classList.remove('show2');
             $msg.classList.add('show');
@@ -74,6 +84,7 @@
             $msg.classList.remove('show');
             $msg1.classList.remove('hidden');
             $msg.classList.add('show2');
+            return true;
         }
     }
     function getUser(id) {

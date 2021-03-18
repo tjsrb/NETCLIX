@@ -7,30 +7,31 @@
 </head>
 
 <body>
-    
 
-    <div class="center">
-        <div >
-             <div class="img">
-            <img src="./logo.png">
+    <div class="vh">
+        <div class="center">
+            <div>
+                <div class="img">
+                    <img src="./logo.png">
+                </div>
+                <div class="text">
+                    <input type="email" id="id" placeholder="아이디 입력">
+                </div>
+                <div class="text">
+                    <input type="password" id="pw" placeholder="비밀번호">
+                </div>
+
+                <div class="btn">
+                    <button type="button" id="btnlogin">
+                        로그인
+                    </button>
+                    <button type="button" id="btnjoin">
+                        회원가입
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="text">
-            <input type="email" id="id" placeholder="아이디 입력"> 
-        </div>
-        <div class="text"> 
-            <input type="password" id="pw" placeholder="비밀번호" >
-        </div>
-       
-        <div class="btn">
-        <button type="button" id= "btnlogin">
-            로그인
-        </button>
-        <button type="button" id="btnjoin">
-            회원가입
-        </button>
     </div>
-    </div>
-   </div>
 </body>
 <script>
     const $id = document.getElementById('id');
@@ -38,38 +39,39 @@
     const $btnlogin = document.getElementById('btnlogin');
     const $btnjoin = document.getElementById('btnjoin');
 
-    $btnlogin.addEventListener("click",loginHandler);
-    $btnjoin.addEventListener("click",join );
+    $btnlogin.addEventListener("click", loginHandler);
+    $btnjoin.addEventListener("click", join);
 
-    function join(){
-        location.href ="./index.html";
+    function join() {
+        location.href = "./join.html";
     }
 
-    function loginHandler(){
-    const login = getUser($id.value, $pw.value);
-    if(login == null){
-        alert("로그인 실패");
-        $id.value = '';
-        $pw.value = '';
-        $id.focus();
+    function loginHandler() {
+        const login = getUser($id.value, $pw.value);
+        if (login == null) {
+            alert("로그인 실패");
+            $id.value = '';
+            $pw.value = '';
+            $id.focus();
+        }
+        else if ($id.value == "" || $pw.value == "") {
+            alert("빈공간이 있습니다.");
+        }
+        else {
+            alert('로그인 성공');
+            location.href = "./join.html";
+        }
     }
-    else if ($id.value == "" || $pw.value ==""){
-        alert("빈공간이 있습니다.");
-    }
-    else{
-        alert('로그인 성공');
-        location.href = "./index.html";
-    }
-}
 
-    function getUser(id,pw){
-    for(let i=0; i<users.length;i++){
-        if(id == users[i].id && pw == users[i].pw){
-        return users[i];
-        alert(users[i]);
+    function getUser(id, pw) {
+        for (let i = 0; i < users.length; i++) {
+            if (id == users[i].id && pw == users[i].pw) {
+                return users[i];
+                alert(users[i]);
+            }
+        }
+        return null;
     }
-}
-return null;
-}
 </script>
+
 </html>
