@@ -5,32 +5,94 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="./main2.css">
     <script src="https://kit.fontawesome.com/1abd862c73.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="./default.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+ ;
+    }
+    </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="navbar__logo">
-            <i class="fab fa-accusoft"></i>
-            <a href="">NETCLIX</a>
+            <a href="#"><img src="./backlogo.png" class="img"></a>
         </div>
 
-    <ul class="navbar__menu">
-       <li><a href ="">장르</a></li>
-       <li><a href ="">현재 상영중</a></li>
-       <li>영화 추천해 드립니다.</li>
-       <li><a href ="">연령별 추천</a></li>
-       <li><a href ="">내 영화관</a></li>
-    </ul>
+        <ul class="navbar__menu">
+            <li><a href="">장르</a></li>
+            <li><a href="">현재 상영중</a></li>
+            <li>영화 추천해 드립니다.</li>
+            <li><a href="">연령별 추천</a></li>
+            <li><a href="">내 영화관</a></li>
+        </ul>
 
-    <ul class="navbar__links">
-        <i class="fas fa-bars"></i>
-    </ul>
-    <a href="" class="navbar__toglebtn">
+        <a href="#" class="navbar__icons">
+            <i class="fas fa-user"></i>
+        </a>
+        <a href="#" class="navbar__toglebtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+    <br>
+    <br>
+    <div class="moive-recommendation">
+        <div class="movie-text">
+            이런 영화 어때?
+        </div>
+        <div> 
+            <!-- <a href="login.html"><img class="imgs" src="https://occ-0-4796-988.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZib2tYmvUpuhxE4MnQ_X6BfsLEVEaZszotjYA_gs-bLqe_HseyvJIt7YG5wlgno8q9Es4TpOztfcMh7o7nYhRO9LOc.webp?r=537"
+                alt="이미지"></a>
+            <img class="imgs" src="https://occ-0-4796-988.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZib2tYmvUpuhxE4MnQ_X6BfsLEVEaZszotjYA_gs-bLqe_HseyvJIt7YG5wlgno8q9Es4TpOztfcMh7o7nYhRO9LOc.webp?r=537"
+                alt="이미지">
+            <img class="imgs" src="https://occ-0-4796-988.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZib2tYmvUpuhxE4MnQ_X6BfsLEVEaZszotjYA_gs-bLqe_HseyvJIt7YG5wlgno8q9Es4TpOztfcMh7o7nYhRO9LOc.webp?r=537"
+                alt="이미지">
+            <img class="imgs" src="https://occ-0-4796-988.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZib2tYmvUpuhxE4MnQ_X6BfsLEVEaZszotjYA_gs-bLqe_HseyvJIt7YG5wlgno8q9Es4TpOztfcMh7o7nYhRO9LOc.webp?r=537"
+                alt="이미지"> -->
         
-    </a>
 
-</nav>
+                <div id="demo" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0" class="active"></li>
+                      <li data-target="#demo" data-slide-to="1"></li>
+                      <li data-target="#demo" data-slide-to="2"></li>
+                         <li data-target="#demo" data-slide-to="3"></li>
+                    </ul>
+                    
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="imgs"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXLY_p0M1rQpOjOQrbr5DLmT9LRLgpfm3eHg&usqp=CAU" width="auto" height="auto">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="imgs"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBdCz1NQfkPSvtTKhu46zuePy8F63cyWuiaQ&usqp=CAU">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="imgs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzB86fc_gX3muTNNQwGtLA3wKnkbicggkdGA&usqp=CAU" >
+                      </div>
+                       <div class="carousel-item">
+                        <img class="imgs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR-GhxPSdlrhSCGiW4IyuGxehbjZzPUDmn6g&usqp=CAU" >
+                      </div>
+                    </div>
+                    
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </a>
+                  </div>
+
+        </div>
+    </div>
 </body>
 
 </html>
