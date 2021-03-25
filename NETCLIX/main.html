@@ -36,75 +36,114 @@
   <div class="movie-text">
     이런 영화 어때?
   </div>
-  <div class="moive-recommendation">
-    
-    <div class="slideshow-container">
-
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="http://www.ibnews.co.kr/data/photos/20180521/art_15270327563567_e74aef.jpg" width="1000" height="" >
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="http://ojsfile.ohmynews.com/STD_IMG_FILE/2013/0426/IE001572854_STD.jpg"width="400"height="200">
-      </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="http://www.newsfreezone.co.kr/news/photo/201712/31323_32697_512.jpg"width="400" height="200">
-      </div>
-
+  <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+    <div class="gallery-cell">
+      <img src="http://www.ibnews.co.kr/data/photos/20180521/art_15270327563567_e74aef.jpg" class="img">
     </div>
-
+    <div class="gallery-cell">
+      <img src="http://ojsfile.ohmynews.com/STD_IMG_FILE/2013/0426/IE001572854_STD.jpg" class="img">
+    </div>
+    <div class="gallery-cell">
+      <img src="http://www.newsfreezone.co.kr/news/photo/201712/31323_32697_512.jpg" class="img">
+    </div>
+    <div class="gallery-cell">
+      <img src="http://www.ibnews.co.kr/data/photos/20180521/art_15270327563567_e74aef.jpg" class="img">
+    </div>
+    <div class="gallery-cell">
+      <img src="http://www.ibnews.co.kr/data/photos/20180521/art_15270327563567_e74aef.jpg" class="img">
+    </div>
+    <div class="gallery-cell">
+      <img src="http://www.ibnews.co.kr/data/photos/20180521/art_15270327563567_e74aef.jpg" class="img">
+    </div>
+    <div class="gallery-cell">
+      <img src="http://www.ibnews.co.kr/data/photos/20180521/art_15270327563567_e74aef.jpg" class="img">
+    </div>
+    <div class="gallery-cell">
+      <img src="http://www.ibnews.co.kr/data/photos/20180521/art_15270327563567_e74aef.jpg" class="img">
+    </div>
   </div>
   <br>
+  <br>
 
-  <div style="text-align:center">
-    <span class="dot" onmouseover="dotMouseover()" onmouseleave="dotMouseleave()"></span>
-    <span class="dot" onmouseover="dotMouseover()" onmouseleave="dotMouseleave()"></span>
-    <span class="dot" onmouseover="dotMouseover()" onmouseleave="dotMouseleave()"></span>
+  <div class="search-bar">
+    <input type="text" class="textbox">
+    <button class="btnsearch">검색</button>
   </div>
+  <br>
+  <br>
+  <div class="movie-text">
+    박스오피스 1위
   </div>
+  <div class="boxoffice">
+    <div class="boxoffice-slide">
+      <img src="https://www.kobis.or.kr/common/mast/movie/2014/07/7e00a486e94f4428b8b2e54313b5c510.jpg" class="img"> 
+    </div>
+    <div class="boxoffice-slide">
+      <img src="https://www.kobis.or.kr/common/mast/movie/2019/01/dce9586f9f0748139af49fc0c445a2cd.jpg" class="img"> 
+    </div>
+    <div class="boxoffice-slide">
+      <img src="https://www.kobis.or.kr/common/mast/movie/2020/12/c21e96f35e3447018c1e37f721b85d18.jpg" class="img"> 
+    </div>
+    <div class="boxoffice-slide">
+      <img src="https://www.kobis.or.kr/common/mast/movie/2014/11/87fc696afd204b3db1aea0c56af601df.jpg" class="img"> 
+    </div>
+    <div class="boxoffice-slide">
+      <img src="https://www.kobis.or.kr/common/mast/movie/2019/03/6a30ec36083644b49de1d04ac021949e.jpg" class="img"> 
+    </div>
+    <div class="boxoffice-slide">
+      <img src="https://www.kobis.or.kr/common/mast/movie/2019/11/5658d961585b46dd8b05225665af2c5a.jpg" class="img"> 
+    </div>
+  </div>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="./test.js"></script>
   <script>
-    var dotMouseoverState = false;
-    var slideIndex = 0;
-    let $dot = document.getElementsByClassName("dot");
-    $dot.addEventListener("click",dotMouseClick);
+    let dot_select_idx = 0;
+    let autoSlideInterval = null;
 
-    showSlides();
-    function dotMouseClick(){
-      
-    }
-    function dotMouseleave(){
-      dotMouseoverState = false;
-      showSlides();     
+    setTimeout(() => {
+      const dot = document.getElementsByClassName('dot');
+      for (let i = 0; i < dot.length; i++) {
+        dot[i].addEventListener('click', function () {
+          dot_select_idx = i;
+        });
+
+        dot[i].addEventListener('mouseover', function () {
+          clearInterval(autoSlideInterval);
+          dot[i].click();
+        });
+
+        dot[i].addEventListener('mouseleave', function () {
+          autoSlide();
+        })
+      }
+    }, 0);
+    autoSlide();
+
+    function autoSlide() {
+      autoSlideInterval = setInterval(() => {
+        const dot = document.getElementsByClassName('dot');
+        dot[(++dot_select_idx) % 8].click();
+        // if(dot_select_idx === 7){
+        //   dot_select_idx = -1;
+        // }
+      }, 3000);
     }
 
-    function dotMouseover(){
-      dotMouseoverState = true;
-    }
-    
-    function showSlides() {
-      if(dotMouseoverState === true){
-        return;
+    $.ajaxPrefilter('json', function(options, orig, jqXHR) { if (options.crossDomain && !$.support.cors) return 'jsonp' });
+
+    $.ajax({
+      dataType : 'jsonp',
+      // jsonpCallback: "callback",
+      type : "GET",
+      url : "https://openapi.naver.com/v1/search/movie.json",
+      headers :{
+        'X-Naver-Client-Id' : 'vwlXL4GR6eWjlUF3MqAR',
+        'X-Naver-Client-Secret' : 'SJb0EOekYn'
+      },
+      success : function(res){
+        alert(res);
       }
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-      setTimeout(showSlides, 3000); // Change image every 2 seconds
-    }
+    })
   </script>
 
 </body>
