@@ -15,7 +15,6 @@ body {
   width: 400px;
   height: 400px;
   margin-right: 10px;
-  background: #8C8;
   counter-increment: gallery-cell;
 }
 

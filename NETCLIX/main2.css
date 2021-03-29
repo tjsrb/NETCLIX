@@ -103,16 +103,14 @@ a{
     justify-content: center;
   }
   .boxoffice-slide{
+    position: relative;
     width: 400px;
     height: 400px;
     margin-right: 10px;
   }
-  .img :hover{
-    
-  }
-
-
-
+ .hidden{
+  display: none;
+}
 
 
 
@@ -142,4 +140,4 @@ a{
       display: block;
       color: tomato; 
     }
-  }
+ }
