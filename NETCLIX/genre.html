@@ -2,10 +2,11 @@
 
 <head>
     <title> 장르 </title>
-    <link rel="stylesheet" href="./main2.css">
+    <link rel="stylesheet" href="./gallery.css">
     <script src="https://kit.fontawesome.com/1abd862c73.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./test.js"></script>
     <link rel="stylesheet" href="./default.css">
-    <link rel="stylesheet" href="./slide.css">
 </head>
 
 <body>
@@ -16,10 +17,10 @@
         </div>
 
         <ul class="navbar__menu">
-            <li><a href="./genre.html">장르</a></li>
-            <li><a href="">현재 상영중</a></li>
+            <li><a href="./age.html">장르</a></li>
+            <li><a href="./now.html">현재 상영중</a></li>
             <li>영화 추천해 드립니다.</li>
-            <li><a href="">연령별 추천</a></li>
+            <li><a href="./age.html">연령별 추천</a></li>
             <li><a href="">내 영화관</a></li>
         </ul>
 
@@ -33,41 +34,221 @@
     <br>
     <br>
     <div class="movie-text">
-         전체관람가
-      </div>
+        액션
+    </div>
+
+    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2017/09/e0fa317fdf6c45d5a2eaf0e744b44b34.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2018/10/6d1f8dd94a88456d85f64e4c9d9df3b7.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2017/01/7aee9c0efb3a46028fc5fbb14af63822.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2020/03/5023ce0932a8437ab6a56607eb3ab2f1.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2015/07/3bd4c5b5ab3b419b90a96af5c15767a5.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2014/12/5fadbd8af9334959be6f836ac8ce2e33.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2020/10/0ee9dc2d879e4aeeac182129e9d8ad3e.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2017/08/e85c68b0ad2942eaba23562d05dc8055.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2019/04/8079786fe68545599a3b9d883ae20aeb.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2016/07/38603ca326004d0997ae642a9d248a03.jpg">
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <div class="movie-text">
+        SF/판타지
+    </div>
+    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/upload/up_img/2011/07/mov_DEC1J3_20110705132428_1.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2021/03/869b991bd39f45c89e6e00d94b60377c.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2014/05/e2bc592da85f42598a602b071665e0c7.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2019/08/f75b8deb663d4e338169c4b1cdd26bfa.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2011/12/04e264a1673340c5a3b7f2c9849e99a5.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2018/05/910c2e2182734c0e98af7232c36a42ef.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2018/11/71e89d810a6d42ccad60391cc3a4c1ae.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/upload/up_img/cleansing/x00/01/57/mov_20050225_40826.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2020/08/a529042d7d004a6daf64a3f8a687dd69.jpg">
+        </div>
+        <div class="gallery-cell">
+            <img class="img"
+                src="https://www.kobis.or.kr/common/mast/movie/2019/05/4284cb5cd9844fb9be706ddb96534c1a.jpg">
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <div class="fifty">
+        <div class="movie-text">
+          로맨스
+        </div>
+        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+            <div class="gallery-cell">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2018/08/db385188166e4cc6b8d786c9c9490082.jpg">
+            </div>
+            <div class="gallery-cell">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2020/12/e4f13fe70955417ba72f1e5000e50ccb.jpg">
+            </div>
+            <div class="gallery-cell">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2020/12/2c06c9518eaf4374a20d0602d34d3f99.jpg">
+            </div>
+            <div class="gallery-cell">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2016/12/fc4ec18ee83d4ca7875480bf07449946.jpg">
+            </div>
+            <div class="gallery-cell">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2016/10/abae30ad618b429e8922e4979a7cab2b.jpg">
+            </div>
+            <div class="gallery-cell">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2021/02/5eaa0c85e8d6478e91f0a1b2a0e827a6.jpg">
+            </div>
+            <div class="gallery-cell">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2013/11/a645ccb83f1a42d3a1ad5bf641e9869e.jpg">
+            </div>
+            <div class="gallery-cell">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2020/06/50209c6dd424473eac237e71611b4b1a.jpg">
+            </div>
+            <div class="gallery-cell">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2018/10/4667197ddc7f48ada475484ab2e85c0a.jpg">
+            </div>
+            <div class="gallery-cell">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2016/05/e0782f8f640243f8bf8f01f255b5539b.jpg">
+            </div>
+    </div>
+    <br>
+    <br>
     
-      <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+    <div class="adult">
+        <div class="movie-text">
+            공포
+          </div>
+          <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
             <div class="gallery-cell">
-                <img class="img" src="https://www.kobis.or.kr/common/mast/movie/2015/01/6ea1e872e9754f8eaa642465e80b5a47.jpg">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2013/08/c1236ea523104cc58271e29e1b71c58f.jpg">
             </div>
             <div class="gallery-cell">
-                <img class="img"src="https://www.kobis.or.kr/common/mast/movie/2016/03/d7aff3e5a3644025a66467337c98aaf5.jpg">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2013/09/987dc00dbc6b4dfc8325066155262996.jpg">
             </div>
             <div class="gallery-cell">
-                <img class="img"src="https://www.kobis.or.kr/upload/up_img/2011/02/mov_CFE04C_20110210205833_1.jpg">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2012/07/f171b53a17464bceb5b43a653c3ea0e2.jpg">
             </div>
             <div class="gallery-cell">
-                <img class="img"src="https://www.kobis.or.kr/common/mast/movie/2016/07/c5a329825bfb45329a6db3aa357eb0f1.jpg">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2014/09/22ae57fef8934b9d9b2c912e48b5abb8.jpg">
             </div>
             <div class="gallery-cell">
-                <img class="img"src="https://www.kobis.or.kr/common/mast/movie/2019/06/2ed97ef814f0469ab6a02e3da2cf3d8d.jpg">
+                <img class="img"
+                    src="https://www.kobis.or.kr/upload/up_img/cleansing/x00/03/09/mov_20050129_42736.jpg">
             </div>
             <div class="gallery-cell">
-                <img class="img"src="https://www.kobis.or.kr/common/mast/movie/2018/12/348b622c740a439499011700711e9372.jpg">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2019/04/d3e31af432e0433db6b0a33bf9325101.jpg">
             </div>
-        </div>
+            <div class="gallery-cell">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2016/07/83cebc77257b4bf3bc28cbe75f937b02.jpg">
+            </div>
+            <div class="gallery-cell">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2017/09/64ddb184853043b9b391a4f301df1c98.jpg">
+            </div>
+            <div class="gallery-cell">
+                <img class="img"
+                    src="https://www.kobis.or.kr/upload/up_img/cleansing/x00/00/66/mov_20020218_36785.jpg">
+            </div>
+            <div class="gallery-cell">
+                <img class="img"
+                    src="https://www.kobis.or.kr/common/mast/movie/2018/03/7ff4348a432b42d1ae763bc99c36c593.jpg">
+            </div>
+    </div>
+    <br>
+    <br>
+    <script>
+        let dot_select_idx = 0;
+        let autoSlideInterval = null;
+        setTimeout(() => {
+            const dot = document.getElementsByClassName('dot');
+            for (let i = 0; i < dot.length; i++) {
+                dot[i].addEventListener('click', function () {
+                    dot_select_idx = i;
+                });
 
-        <div class="twoeleve">
+                dot[i].addEventListener('mouseover', function () {
+                    clearInterval(autoSlideInterval);
+                    dot[i].click();
+                });
 
-        </div>
-            
-        </div>
-        <div class="fifty">
-            
-        </div>
-        <div class="adult">
+                dot[i].addEventListener('mouseleave', function () {
+                    autoSlide();
+                })
+            }
+        }, 0);
 
-        </div>
+    </script>
 </body>
 
 </html>
