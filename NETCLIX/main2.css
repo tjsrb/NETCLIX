@@ -111,7 +111,11 @@ a{
  .hidden{
   display: none;
 }
-
+.star{ 
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 
 

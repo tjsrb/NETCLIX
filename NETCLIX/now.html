@@ -8,8 +8,18 @@
 
     <link rel="stylesheet" href="./default.css">
     <link rel="stylesheet" href="./3D.css">
+    <style>
+        .is-selected img{
+            position: absolute;
+            transform: perspective(500px) rotateY(0turn);
+        }
+        .is-selected{
+            transition: 1s;
+            transform : scale(1.5);
+            z-index: 9999;
+        }
+    </style>
 
-    
 </head>
 
 <body>
@@ -83,7 +93,9 @@
     <br>
     <script>
         setTimeout(() => {
-            document.getElementsByClassName('flickity-viewport')[0].style.height = '500px';
+            document.getElementsByClassName('flickity-viewport')[0].style.height = '700px';
+            const prevBtn = document.getElementsByClassName('flickity-prev-next-button')[0];
+            const nextBtn = document.getElementsByClassName('flickity-prev-next-button')[1];
         }, 0);
     </script>
 </body>
