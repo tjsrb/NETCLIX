@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<head>
+    <title>마이 페이지</title>
+    <script src="https://kit.fontawesome.com/1abd862c73.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="./slide.js"></script>
+
+    <link rel="stylesheet" href="./default.css">
+    <link rel="stylesheet" href="./3D.css">
+    <link rel="stylesheet" href="./main2.css">
+
+    
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <a href="main.html"><img src="./backlogo.png" class="img"></a>
+        </div>
+
+        <ul class="navbar__menu">
+            <li><a href="./age.html">장르</a></li>
+            <li><a href="./now.html">현재 상영중</a></li>
+            <li>영화 추천해 드립니다.</li>
+            <li><a href="./age.html">연령별 추천</a></li>
+            <li><a href="./">내 영화관</a></li>
+        </ul>
+
+        <a href="#" class="navbar__icons">
+            <i class="fas fa-user"></i>
+        </a>
+        <a href="#" class="navbar__toglebtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+    <br>
+    <br>
+    <div class="movie-text">
+        내가 찜한 영화
+    </div>
+    <div class="boxoffice">
+        <div class="boxoffice-slide">
+          <img id="post_1" src="https://www.kobis.or.kr/common/mast/movie/2014/07/7e00a486e94f4428b8b2e54313b5c510.jpg"
+            class="img">
+          <div style="cursor: pointer;" class="hidden star" id="star_1">
+            <svg width="50px" height="50px" viewBox="0 0 300 275" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <polygon fill="#fdff00" stroke="#605a00" stroke-width="15"
+                points="150,25  179,111 269,111 197,165 223,251  150,200 77,251  103,165 31,111 121,111" />
+            </svg>
+          </div>
+        </div>
+    
+    
+    
+        <div class="boxoffice-slide">
+          <img id="post_2" src="https://www.kobis.or.kr/common/mast/movie/2019/01/dce9586f9f0748139af49fc0c445a2cd.jpg"
+            class="img">
+          <div style="cursor: pointer;" class="hidden star" id="star_2">
+            <svg width="50px" height="50px" viewBox="0 0 300 275" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <polygon fill="" stroke="#605a00" stroke-width="15"
+                points="150,25  179,111 269,111 197,165 223,251  150,200 77,251  103,165 31,111 121,111" />
+            </svg>
+          </div>
+        </div>
+        <div class="boxoffice-slide">
+          <img id="post_3" src="https://www.kobis.or.kr/common/mast/movie/2020/12/c21e96f35e3447018c1e37f721b85d18.jpg"
+            class="img">
+    
+          <div class="hidden star" id="star_3">
+            <svg style="cursor: pointer;" width="50px" height="50px" viewBox="0 0 300 275"
+              xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <polygon fill="" stroke="#605a00" stroke-width="15"
+                points="150,25  179,111 269,111 197,165 223,251  150,200 77,251  103,165 31,111 121,111" />
+            </svg>
+          </div>
+        </div>
+        <div class="boxoffice-slide">
+          <img id="post_4" src="https://www.kobis.or.kr/common/mast/movie/2014/11/87fc696afd204b3db1aea0c56af601df.jpg"
+            class="img">
+          <div style="cursor: pointer;" class="hidden star" id="star_4">
+            <svg width="50px" height="50px" viewBox="0 0 300 275" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <polygon fill="" stroke="#605a00" stroke-width="15"
+                points="150,25  179,111 269,111 197,165 223,251  150,200 77,251  103,165 31,111 121,111" />
+            </svg>
+          </div>
+        </div>
+    
+        <div class="boxoffice-slide">
+          <img id="post_5" src="https://www.kobis.or.kr/common/mast/movie/2019/03/6a30ec36083644b49de1d04ac021949e.jpg"
+            class="img">
+          <div style="cursor: pointer;" class="hidden star" id="star_5">
+            <svg width="50px" height="50px" viewBox="0 0 300 275" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <polygon fill="" stroke="#605a00" stroke-width="15"
+                points="150,25  179,111 269,111 197,165 223,251  150,200 77,251  103,165 31,111 121,111" />
+            </svg>
+          </div>
+        </div>
+    
+        <div class="boxoffice-slide">
+          <img id="post_6" src="https://www.kobis.or.kr/common/mast/movie/2019/11/5658d961585b46dd8b05225665af2c5a.jpg"
+            class="img">
+          <div style="cursor: pointer;" class="hidden star" id="star_6">
+            <svg width="50px" height="50px" viewBox="0 0 300 275" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <polygon fill="" stroke="#605a00" stroke-width="15"
+                points="150,25  179,111 269,111 197,165 223,251  150,200 77,251  103,165 31,111 121,111" />
+            </svg>
+          </div>
+          
+        </div>
+    
+    
+</body>
+<script>
+    let dot_select_idx = 0;
+    let autoSlideInterval = null;
+    const $slide = document.getElementsByClassName("boxoffice-slide");
+    const $star = document.getElementsByClassName("star");
+
+    for (let i = 0; i < $star.length; i++) {
+      $star[i].addEventListener('click', function () {
+        if (event.target.getAttribute('fill') !== null) {
+          event.target.removeAttribute('fill');
+        } else {
+          event.target.setAttribute('fill', "#fdff00");
+        }
+      });
+    }
+
+    for (let i = 0; i < $slide.length; i++) {
+      $slide[i].addEventListener('mouseover', showStar);
+    }
+    for (let i = 0; i < $slide.length; i++) {
+      $slide[i].addEventListener('mouseleave', hideStar);
+    }
+
+    function hideStar() {
+      if (event.target.firstChild.nextSibling.tagName !== 'IMG') {
+        return;
+      }
+      const id = event.target.firstChild.nextSibling.id.split('_')[1];
+      document.getElementById('star_' + id).classList.add('hidden');
+    }
+
+    function showStar() {
+      if (event.target.tagName !== 'IMG') {
+        return;
+      }
+      const id = event.target.id.split('_')[1];
+      document.getElementById('star_' + id).classList.remove('hidden');
+    }
+    setTimeout(() => {
+      const dot = document.getElementsByClassName('dot');
+      for (let i = 0; i < dot.length; i++) {
+        dot[i].addEventListener('click', function () {
+          dot_select_idx = i;
+        });
+
+        dot[i].addEventListener('mouseover', function () {
+          clearInterval(autoSlideInterval);
+          dot[i].click();
+        });
+
+        dot[i].addEventListener('mouseleave', function () {
+          autoSlide();
+        })
+      }
+    }, 0);
+    autoSlide();
+
+    function autoSlide() {
+      autoSlideInterval = setInterval(() => {
+        const dot = document.getElementsByClassName('dot');
+        dot[(++dot_select_idx) % 8].click();
+        // if(dot_select_idx === 7){
+        //   dot_select_idx = -1;
+        // }
+      }, 3000);
+    }
+
+    $.ajaxPrefilter('json', function (options, orig, jqXHR) { if (options.crossDomain && !$.support.cors) return 'jsonp' });
+
+    $.ajax({
+      dataType: 'jsonp',
+      // jsonpCallback: "callback",
+      type: "GET",
+      url: "https://openapi.naver.com/v1/search/movie.json",
+      headers: {
+        'X-Naver-Client-Id': 'vwlXL4GR6eWjlUF3MqAR',
+        'X-Naver-Client-Secret': 'SJb0EOekYn'
+      },
+      success: function (res) {
+        alert(res);
+      }
+    })
+  </script>
+
+</html>
