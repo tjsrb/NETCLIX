@@ -6,17 +6,28 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="./slide.js"></script>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="./default.css">
     <link rel="stylesheet" href="./3D.css">
     <style>
-        .is-selected img{
+        .is-selected img {
             transform: perspective(500px) rotateY(0turn);
         }
-        .is-selected{
+
+        .is-selected {
             transition: 1s;
-            transform : scale(1.5);
+            transform: scale(1.5);
             z-index: 9999;
         }
+        .color{
+            background-color: black;
+            color: white;
+        }
+       
         /* .is-pointer{
             display
         } */
@@ -49,70 +60,117 @@
     <br>
     <br>
     <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-        <div class="gallery-cell" >  <!--<a href="./main.html">  -->
+        <div class="gallery-cell">
+            <!--<a href="./main.html">  -->
             <img class="img movie"
-                src="https://www.kobis.or.kr/common/mast/movie/2021/03/e6e53a5c112b449aa5b9a6271bcbdee3.jpg">
+                src="https://www.kobis.or.kr/common/mast/movie/2021/03/e6e53a5c112b449aa5b9a6271bcbdee3.jpg"
+                onclick="showModal('고질라',30000)">
             </a>
-            </div>
-         <div class="gallery-cell"> <!--<a href="./main.html">  -->
+        </div>
+        <div class="gallery-cell"> 
+            <!--<a href="./main.html">  -->
             <img class="img movie"
-                src="https://www.kobis.or.kr/common/mast/movie/2021/02/3c9e8b8fa50f4a73820ad33070fed40f.jpg">
+                src="https://www.kobis.or.kr/common/mast/movie/2021/02/3c9e8b8fa50f4a73820ad33070fed40f.jpg"
+                onclick="showModal('귀칼',20000)">
             </a>
-            </div>
-        <div class="gallery-cell">  <!--<a href="./main.html">  -->
-            <img class="img movie" 
-                src="https://www.kobis.or.kr/common/mast/movie/2021/03/2f506c5593754549bc24b959132dcef5.jpg">
+        </div>
+        <div class="gallery-cell">
+            <!--<a href="./main.html">  -->
+            <img class="img movie"
+                src="https://www.kobis.or.kr/common/mast/movie/2021/03/2f506c5593754549bc24b959132dcef5.jpg"
+                onclick="showModal('미나리',10000)">
             </a>
-            </div>
-         <div class="gallery-cell"> <!--<a href="./main.html">  -->
+        </div>
+        <div class="gallery-cell">
+            <!--<a href="./main.html">  -->
             <img class="img movie"
                 src="https://www.kobis.or.kr/common/mast/movie/2021/03/1080d1ab51ec47e39f7b0593d01674c2.jpg">
             </a>
-            </div>
-         <div class="gallery-cell"> <!--<a href="./main.html">  -->
+        </div>
+        <div class="gallery-cell">
+            <!--<a href="./main.html">  -->
             <img class="img movie"
                 src="https://www.kobis.or.kr/common/mast/movie/2021/03/7a1940923a6646139a9d91daaebf7d1d.jpg">
             </a>
-            </div>
-         <div class="gallery-cell"> <!--<a href="./main.html">  -->
+        </div>
+        <div class="gallery-cell">
+            <!--<a href="./main.html">  -->
             <img class="img movie"
                 src="https://www.kobis.or.kr/common/mast/movie/2021/03/61f91ccb27fe4b029b1e60bf27ad5ef6.jpg">
             </a>
-            </div>
-         <div class="gallery-cell"> <!--<a href="./main.html">  -->
+        </div>
+        <div class="gallery-cell">
+            <!--<a href="./main.html">  -->
             <img class="img movie"
                 src="https://www.kobis.or.kr/common/mast/movie/2021/02/67343ffa8f074831b56e48f1a76d8c8f.jpg">
             </a>
-            </div>
-         <div class="gallery-cell"> <!--<a href="./main.html">  -->
+        </div>
+        <div class="gallery-cell">
+            <!--<a href="./main.html">  -->
             <img class="img movie"
                 src="https://www.kobis.or.kr/common/mast/movie/2021/03/e48e5377719c43a5940612160e1b3a3e.jpg">
             </a>
-            </div>
-         <div class="gallery-cell"> <!--<a href="./main.html">  -->
+        </div>
+        <div class="gallery-cell">
+            <!--<a href="./main.html">  -->
             <img class="img movie"
                 src="https://www.kobis.or.kr/common/mast/movie/2021/01/9313c9b567fd4b7a9f0736a47683b006.jpg">
             </a>
-            </div>
-         <div class="gallery-cell"> <!--<a href="./main.html">  -->
+        </div>
+        <div class="gallery-cell">
+            <!--<a href="./main.html">  -->
             <img class="img movie"
                 src="https://www.kobis.or.kr/common/mast/movie/2021/03/dbb2487fc9cc4566ae9f178eef80a538.jpg">
             </a>
-            </div>
+        </div>
 
     </div>
-    <br>    
     <br>
+    <br>
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content color">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div id="movieTitle"></div>
+                    <div id="moviePrice"></div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+ 
+
     <script>
-            
+        let selectMovie = {
+        };
 
         setTimeout(() => {
             document.getElementsByClassName('flickity-viewport')[0].style.height = '700px';
             const prevBtn = document.getElementsByClassName('flickity-prev-next-button')[0];
             const nextBtn = document.getElementsByClassName('flickity-prev-next-button')[1];
         }, 0);
-        const $img = document.getElementsByClassName("img"); 
-     </script>
+        const $img = document.getElementsByClassName("img");
+
+        function showModal(title, price) {
+            selectMovie = title;
+            $("#movieTitle").text(title);
+            $("#moviePrice").text(price);
+            $("#myModal").modal();
+        }
+    </script>
 </body>
 
 </html>
