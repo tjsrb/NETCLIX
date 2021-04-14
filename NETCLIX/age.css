@@ -26,10 +26,11 @@ a{
 .navbar__menu li {
   margin-right: 30px;
   padding: 8px 12px;
+  text-decoration: none;
 }
 .navbar__menu li:hover {
-  background-color: gray;
   border-radius:8px;
+  color: red;
 }  
 .moive-recommendation{
   display: flex;

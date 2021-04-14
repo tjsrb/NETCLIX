@@ -49,3 +49,13 @@ a {
 	background: transparent;
 	cursor: pointer;
 } */
+input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+  }

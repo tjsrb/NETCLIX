@@ -4,8 +4,7 @@
     <title> 현재 상영중 </title>
     <script src="https://kit.fontawesome.com/1abd862c73.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="./slide.js"></script>
-
+    <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -43,95 +42,45 @@
         </div>
 
         <ul class="navbar__menu">
-            <li><a href="./age.html">장르</a></li>
+            <li><a href="./genre.html">장르</a></li>
             <li><a href="./now.html">현재 상영중</a></li>
-            <li>영화 추천해 드립니다.</li>
-            <li><a href="./age.html">연령별 추천</a></li>
+      
+            <div class="search-bar">
+              <input type="text" class="textbox">
+              <style>
+                .textbox {
+                  color: white;
+                  background-color: black;
+                  border: 1px solid white;
+                }
+                .btnsearch {
+                  background-color: black;
+                  color: white;
+                  border: 1px solid white;
+                  margin-right: 20px;
+                }
+              </style>
+              <button class="btnsearch">검색</button>
+            </div>
+            <li><a href="age.html">연령별 추천</a></li>
             <li><a href="./my.html">내 영화관</a></li>
-        </ul>
-
-        <a href="#" class="navbar__icons">
+          </ul>
+         
+          <a href="./my.html" class="navbar__icons">
             <i class="fas fa-user"></i>
-        </a>
-        <a href="#" class="navbar__toglebtn">
-            <i class="fas fa-bars"></i>
-        </a>
-    </nav>
+          </a>
+          <a href="./login.html">로그아웃</a>
+        </nav>
     <br>
     <br>
-    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-        <div class="gallery-cell">
-            <!--<a href="./main.html">  -->
-            <img class="img movie"
-                src="https://www.kobis.or.kr/common/mast/movie/2021/03/e6e53a5c112b449aa5b9a6271bcbdee3.jpg"
-                onclick="showModal('고질라',30000)">
-            </a>
+        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }' id="movieList">
         </div>
-        <div class="gallery-cell"> 
-            <!--<a href="./main.html">  -->
-            <img class="img movie"
-                src="https://www.kobis.or.kr/common/mast/movie/2021/02/3c9e8b8fa50f4a73820ad33070fed40f.jpg"
-                onclick="showModal('귀칼',20000)">
-            </a>
-        </div>
-        <div class="gallery-cell">
-            <!--<a href="./main.html">  -->
-            <img class="img movie"
-                src="https://www.kobis.or.kr/common/mast/movie/2021/03/2f506c5593754549bc24b959132dcef5.jpg"
-                onclick="showModal('미나리',10000)">
-            </a>
-        </div>
-        <div class="gallery-cell">
-            <!--<a href="./main.html">  -->
-            <img class="img movie"
-                src="https://www.kobis.or.kr/common/mast/movie/2021/03/1080d1ab51ec47e39f7b0593d01674c2.jpg">
-            </a>
-        </div>
-        <div class="gallery-cell">
-            <!--<a href="./main.html">  -->
-            <img class="img movie"
-                src="https://www.kobis.or.kr/common/mast/movie/2021/03/7a1940923a6646139a9d91daaebf7d1d.jpg">
-            </a>
-        </div>
-        <div class="gallery-cell">
-            <!--<a href="./main.html">  -->
-            <img class="img movie"
-                src="https://www.kobis.or.kr/common/mast/movie/2021/03/61f91ccb27fe4b029b1e60bf27ad5ef6.jpg">
-            </a>
-        </div>
-        <div class="gallery-cell">
-            <!--<a href="./main.html">  -->
-            <img class="img movie"
-                src="https://www.kobis.or.kr/common/mast/movie/2021/02/67343ffa8f074831b56e48f1a76d8c8f.jpg">
-            </a>
-        </div>
-        <div class="gallery-cell">
-            <!--<a href="./main.html">  -->
-            <img class="img movie"
-                src="https://www.kobis.or.kr/common/mast/movie/2021/03/e48e5377719c43a5940612160e1b3a3e.jpg">
-            </a>
-        </div>
-        <div class="gallery-cell">
-            <!--<a href="./main.html">  -->
-            <img class="img movie"
-                src="https://www.kobis.or.kr/common/mast/movie/2021/01/9313c9b567fd4b7a9f0736a47683b006.jpg">
-            </a>
-        </div>
-        <div class="gallery-cell">
-            <!--<a href="./main.html">  -->
-            <img class="img movie"
-                src="https://www.kobis.or.kr/common/mast/movie/2021/03/dbb2487fc9cc4566ae9f178eef80a538.jpg">
-            </a>
-        </div>
-
-    </div>
     <br>
     <br>
     <!-- The Modal -->
     <div class="modal fade" id="myModal">
         <div class="modal-dialog modal-xl">
-            <div class="modal-content color">
-
+            <div class="modal-content color" style="border: solid white;">
                 <!-- Modal Header -->
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -151,24 +100,72 @@
             </div>
         </div>
     </div>
- 
 
+    <div class="footer">
+        <div class="footer__logo">
+            <a href="main.html"><img src="./backlogo.png" class="img"></a>
+        </div>
+        <ul class="footer__menu">
+            <li><a href="#">고객지원</li>
+            <li><a href="#">개인정보 처리방침</li>
+            <li><a href="#">서비스 약관</li>
+            <li>경기도 의정부시 경민대학교 효행관 404</li>
+        </ul>
+        <style> 
+            .icon-bag a{
+            margin-left:30px;
+            color: gray;
+            }
+
+            </style>
+        <div class="icon-bag">
+            <a href="#"><i class="fab fa-facebook-square fa-3x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-3x"></i></a>
+            <a href="#"><i class="fab fa-twitter-square fa-3x"></i></a>
+            </div>
+    </div>
+  
+    <script src="data/movie-data.js"></script>
     <script>
-        let selectMovie = {
-        };
-
-        setTimeout(() => {
-            document.getElementsByClassName('flickity-viewport')[0].style.height = '700px';
-            const prevBtn = document.getElementsByClassName('flickity-prev-next-button')[0];
-            const nextBtn = document.getElementsByClassName('flickity-prev-next-button')[1];
-        }, 0);
+        init();
+        setTimeout(function(){
+            loadJs("./slide.js");
+            setInterval(() => {
+                document.getElementsByClassName('flickity-viewport')[0].style.height = '700px';
+            }, 0);
+        },0); 
         const $img = document.getElementsByClassName("img");
 
         function showModal(title, price) {
-            selectMovie = title;
-            $("#movieTitle").text(title);
-            $("#moviePrice").text(price);
-            $("#myModal").modal();
+            if(event.target.parentNode.classList.contains("is-selected")){
+                selectMovie = title;
+                $("#movieTitle").text(title);
+                $("#moviePrice").text(price);
+                $("#myModal").modal();
+            }
+        }
+
+        function init(){
+            let innerHTML = ``;
+            let movieList = document.getElementById('movieList');
+            for(var i =0;i<movies.length;i++){
+                const movie = movies[i];
+                innerHTML += `
+                <div class="gallery-cell">
+                    <img class="img movie"
+                        src="${movie.img}"
+                        onclick="showModal('${movie.title}',${movie.star})">
+                </div>
+                `;
+            }
+            movieList.innerHTML = innerHTML;
+        }
+
+        function loadJs(url) {
+            var script = document.createElement('script');
+            script.src = url;
+            script.setAttribute('async', 'true');
+            document.documentElement.firstChild.appendChild(script);
         }
     </script>
 </body>

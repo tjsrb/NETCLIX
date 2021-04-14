@@ -22,15 +22,21 @@ a{
     display: flex;
     list-style: none;
     padding-left: 0;
+    margin-left: 400px;
   }
   .navbar__menu li {
     margin-right: 30px;
     padding: 8px 12px;
+    text-decoration: none;
   }
-  .navbar__menu li:hover {
-    background-color: gray;
-    border-radius:8px;
-  }  
+  .navbar__menu a{
+    text-decoration: none;
+  }
+  .navbar__menu a:hover{
+    color: red;
+  }
+  
+  
   .moive-recommendation{
     display: flex;
   }
@@ -50,10 +56,10 @@ a{
   }
  
   .navbar__icons{
-    margin-right: 20px;
     list-style: none;
     color: white;
     display: flex;
+    margin-left: 300px;
   } 
   .navbar__icons li {
     padding: 8px 12px;
@@ -95,7 +101,6 @@ a{
     font-size: 1.0rem;
     width: 50px;
     height: 30px;
-    margin-left: 15px;
   }
   .boxoffice{
     display: flex;
