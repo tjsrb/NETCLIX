@@ -20,4 +20,26 @@
     justify-content: center;
     transform: perspective(500px) rotateY(20deg);
   }
-  
+.is-selected img {
+    transform: perspective(500px) rotateY(0turn);
+}
+.is-selected {
+    transition: 1s;
+    transform: scale(1.5);
+    z-index: 9999;
+}
+.modal-content{
+  background-color: black;
+  color: white;
+}
+.img-box{
+  width: 100%;
+  height: auto;
+}
+.img{
+  width: 100%;
+}
+.movie-story{
+  width: 500px;
+  height: auto;
+}

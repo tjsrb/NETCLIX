@@ -11,6 +11,6 @@ function bindPage(id){
     };
     console.log();
     // xhttp.open("GET", "http://127.0.0.1:5500/" + id + "/" + id+".html", true);
-    xhttp.open("GET", "http://127.0.0.1:5500/새로시작해보자 (1)/새로시작해보자/"+id+"/"+ id + ".html", true);
+    xhttp.open("GET", "http://127.0.0.1:5500/새로시작해보자/새로시작해보자/"+id+"/"+ id + ".html", true);
     xhttp.send();
 }
