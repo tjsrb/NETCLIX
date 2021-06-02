@@ -1,0 +1,10 @@
+.gallery {
+    background: black;
+  }
+  
+  .gallery-cell {
+    width: 400px;
+    height: 400px;
+    margin-right: 10px;
+    counter-increment: gallery-cell;
+  }

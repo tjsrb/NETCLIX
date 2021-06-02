@@ -3,53 +3,11 @@
 <head>
   <title>메인페이지</title>
   <meta charset="utf-8">
-  <script src="https://kit.fontawesome.com/1abd862c73.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./main2.css">
-  <link rel="stylesheet" href="./default.css">
-  <link rel="stylesheet" href="./slide.css">
-  <link rel="stylesheet" href="./footer.css">
-
-
 </head>
-
 <body>
-  <nav class="navbar">
-    <div class="navbar__logo">
-      <a href="#"><img src="./backlogo.png" class="img"></a>
-    </div>
+    <header> 
 
-    <ul class="navbar__menu">
-      <li><a href="./genre.html">장르</a></li>
-      <li><a href="./now.html">현재 상영중</a></li>
-
-      <div class="search-bar">
-        <input type="text" class="textbox">
-        <style>
-          .textbox {
-            color: white;
-            background-color: black;
-            border: 1px solid white;
-          }
-          .btnsearch {
-            background-color: black;
-            color: white;
-            border: 1px solid white;
-            margin-right: 20px;
-          }
-        </style>
-        <button class="btnsearch">검색</button>
-      </div>
-      <li><a href="age.html">연령별 추천</a></li>
-      <li><a href="./my.html">내 영화관</a></li>
-    </ul>
-   
-    <a href="./my.html" class="navbar__icons">
-      <i class="fas fa-user"></i>
-    </a>
-    <a href="./login.html">로그아웃</a>
-  </nav>
-  <br>
-  <br>
+    </header>
   <div class="movie-text">
     이런 영화 어때?
   </div>
@@ -83,11 +41,11 @@
   <br>
 
 
-  <div class="movie-text">
+  <div class="movie-text font-size-15rem color-white padding-15px">
     박스오피스 1위
   </div>
 
-  <div class="boxoffice">
+  <div class="center">
     <div class="boxoffice-slide">
       <img id="post_1" src="https://www.kobis.or.kr/common/mast/movie/2014/07/7e00a486e94f4428b8b2e54313b5c510.jpg"
         class="img">
@@ -156,75 +114,16 @@
       </div>
     </div>
   </div>
-  <div class="footer">
-    <div class="footer__logo">
-      <a href="main.html"><img src="./backlogo.png" class="img"></a>
-    </div>
-    <ul class="footer__menu">
-      <li><a href="#">고객지원</li>
-      <li><a href="#">개인정보 처리방침</li>
-      <li><a href="#">서비스 약관</li>
-        <li>경기도 의정부시 경민대학교 효행관 404</li>
+  <footer> 
 
-
-    </ul>
-    <style>
-      .icon-bag a {
-        margin-left: 30px;
-        color: gray;
-      }
-    </style>
-    <div class="icon-bag">
-      <a href="#"><i class="fab fa-facebook-square fa-3x"></i></a>
-      <a href="#"><i class="fab fa-instagram fa-3x"></i></a>
-      <a href="#"><i class="fab fa-twitter-square fa-3x"></i></a>
-    </div>
-  </div>
-
-
+  </footer>
+  <link rel="stylesheet" href="./main.css" />
+  <link rel="stylesheet" href="../slide/slide.css" />
+  <script src="https://kit.fontawesome.com/1abd862c73.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="./test.js"></script>
-  <script>
-    let dot_select_idx = 0;
-    let autoSlideInterval = null;
-    const $hidden = document.getElementsByClassName("hidden");
-    const $slide = document.getElementsByClassName("boxoffice-slide");
-    const $star = document.getElementsByClassName("star");
-
-    for (let i = 0; i < $star.length; i++) {   /*별을 클릭하면 색이 변하는 이벤트*/
-      $star[i].addEventListener('click', function () {
-        if (event.target.getAttribute('fill') !== null) {
-          event.target.removeAttribute('fill');
-        } else {
-          event.target.setAttribute('fill', "#fdff00");
-        }
-      });
-    }
-    /*마우스를 올렸을때 별을 보이게 하는 이벤트*/
-    for (let i = 0; i < $slide.length; i++) {
-      $slide[i].addEventListener('mouseover', showStar);
-    }
-    for (let i = 0; i < $slide.length; i++) {
-      $slide[i].addEventListener('mouseleave', hideStar);
-    }
-    function hideStar() {
-      if (event.target.firstChild.nextSibling.tagName !== 'IMG') {
-        return;
-      }
-      const id = event.target.firstChild.nextSibling.id.split('_')[1];
-      document.getElementById('star_' + id).classList.add('hidden');
-    }
-
-    function showStar() {
-      if (event.target.tagName !== 'IMG') {
-        return;
-      }
-      const id = event.target.id.split('_')[1];
-      document.getElementById('star_' + id).classList.remove('hidden');
-    }
-
-  </script>
-
+  <script src="../slide/slide.js"></script>
+  <script src="../../새로시작해보자/default/include.js"></script>
+  
 </body>
 
 </html>

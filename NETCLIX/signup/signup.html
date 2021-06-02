@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> 회원가입 페이지 </title>
+    <link rel="stylesheet" href="./signup.css">
+    <link rel="stylesheet" href="../default/default.css">
+    <script src="./data.js "> </script>
+</head>
+
+<body>
+
+    <div class="center container">
+
+        <div class="logo-img">
+            <img src="../image/logo.png" class="logo">
+        </div>
+
+        <div class="input-container">
+            <div class="margin">
+                <input type="email" class=" margin-15px font-size-15rem color-white border-radius-10px bg-black border-1px-solid-black" id="id" placeholder="아이디 입력">
+                <label id="msgSuccess" class="hidden show--success">사용 가능한 아이디 입니다. </label>
+                <label id="msgFail" class="hidden show--fail">사용 불가능한 아이디 입니다. </label>
+            </div>
+            <div class="margin">
+                <input type="password" class=" margin-15px font-size-15rem color-white border-radius-10px bg-black border-1px-solid-black" id="pw" placeholder="비밀번호">
+                <input type="password" class=" margin-15px font-size-15rem color-white border-radius-10px bg-black border-1px-solid-black" id="CheckPW" placeholder="비밀번호 확인">
+
+            </div>
+            <div class="pwtext">
+                <label id="pwSuccess" class="hidden show--fail">비밀번호 불일치 </label>
+                <label id="pwFail" class="hidden show--success">비밀번호 일치 </label>
+            </div>
+            <br>
+            <div>
+                <label id="null" class="hidden show--fail margin-left--15px">빈공간이 존재합니다.</label>
+            </div>
+            <div class="btn">
+                <button type="button" id="btnSignup" class="btn__signup bg-black  border-1px-solid-white color-white border-radius-10px margin-15px">
+                    회원가입
+                </button>
+                <a href="../login/login.html" class="margin-left--15px color-white">로그인 하러 가기</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

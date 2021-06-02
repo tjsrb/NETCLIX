@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    background-color: black;
+  }
+  a{
+      text-decoration: none;
+      color: white;
+    }
+    .navbar {
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      background-color: black;
+      padding: 8px 12px;
+    }
+    .navbar__logo{
+      font-size: 24px;
+      color: white;
+      margin-left: 20px;
+    }
+    .navbar__menu{
+      display: flex;
+      list-style: none;
+      padding-left: 0;
+      margin-left: 400px;
+    }
+    .navbar__menu li {
+      margin-right: 30px;
+      padding: 8px 12px;
+      text-decoration: none;
+    }
+    .navbar__menu a{
+      text-decoration: none;
+    }
+    .navbar__menu a:hover{
+      color: red;
+    }
+    
+    
+    .moive-recommendation{
+      display: flex;
+    }
+    .movie-text{
+      display: flex;
+      align-items: center;
+      border-right:0.5px solid black;
+      padding: 10px;
+      background-color: black;
+      font-size: 1.5rem;
+      color: white;
+    }
+    .movie-list{
+      display: flex;
+      background-color: black;
+      list-style: none;
+    }
+   
+    .navbar__icons{
+      list-style: none;
+      color: white;
+      display: flex;
+      margin-left: 300px;
+    } 
+    .navbar__icons li {
+      padding: 8px 12px;
+    }
+    .navbar__toglebtn{
+      display: none;
+      position: absolute;
+      right: 32px;
+      font-size: 24px;
+      color: #000000;
+    }
+  
+    .navbar__logo img{
+      width: 100px;
+      height: 40px;
+    }
+  
+    .imgs {
+      width: 1500px;
+      height: 500px;
+    }
+    .carousel-inner{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+      width: 500px;
+    }
+    .search-bar{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .textbox{
+      width: 300px;
+      height: 30px;
+    }
+    .btnsearch{
+      font-size: 1.0rem;
+      width: 50px;
+      height: 30px;
+    }
+    .boxoffice{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .boxoffice-slide{
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin-right: 10px;
+    }
+   .hidden{
+    display: none;
+  }
+  .star{ 
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+    @media screen and (max-width: 750px){
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+      }
+      .navbar__menu{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      .navbar__menu li{
+        width: 100%;
+        text-align: center;
+      }
+      .navbar__icons{
+          justify-content: center;
+          width: 100%;
+      }
+      .navbar__toglebtn{
+        display: block;
+        color: tomato; 
+      }
+   }

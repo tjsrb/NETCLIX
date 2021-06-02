@@ -1,0 +1,33 @@
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-img{
+    width: 700px;
+    height: 350px;
+}
+.input-container{
+    width: auto;
+}
+.container{
+    height: 100%;
+}
+.show--fail{
+    color: red;
+}
+.show--success{
+    color: blue;
+}
+.btn__signup{
+    width: 100px;
+    height: 30px;
+}
